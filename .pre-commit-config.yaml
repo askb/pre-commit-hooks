@@ -1,0 +1,19 @@
+---
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+
+fail_fast: false
+
+repos:
+  - repo: https://github.com/askb/pre-commit-hooks
+    rev: master
+    hooks:
+      - id: write-good
+
+  - repo: https://github.com/btford/write-good
+    rev: v0.10.0
+    hooks:
+      - id: write-good
+        name: write-good
+        language: node
+        files: "\\.(rst|md|markdown|mdown|mkdn)$"
